@@ -22,7 +22,11 @@ void print_memory_for_pid(int pid) {
       for (vma = mm->mmap; vma; vma = vma->vm_next) {
         unsigned long start = vma->vm_start;
         unsigned long end = vma->vm_end;
-        printk(KERN_INFO "Memory region: %lx - %lx\n", start, end);
+        printk(KERN_INFO "procmon: Memory region: %lx - %lx\n", start, end);
+        printk(KERN_INFO "procmon: Memory protection flags: %lx\n", vma->vm_flags);
+        if (vma->vm_file) {
+          printk(KERN_INFO "procmon: Backed by file: %s\n", vma->vm_file->f_path.dentry->d_name.name);
+        }
       }
     }
   }
