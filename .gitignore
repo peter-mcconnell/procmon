@@ -1,0 +1,35 @@
+# Ignore compiled kernel modules
+*.ko
+
+# Ignore object files
+*.o
+
+# Ignore temporary files
+*~
+
+# Ignore .depend files
+*.depend
+
+# Ignore .mod.c files
+*.mod.c
+
+# Ignore .mod.o files
+*.mod.o
+
+# Ignore .symvers files
+*.symvers
+
+# Ignore .order files
+*.order
+
+# Ignore .tmp_versions directories
+*.tmp_versions/
+
+# Ignore modules.order and modules.builtin files
+*modules.order
+*modules.builtin
+
+.procmon*
+.Module*
+.modules*
+procmon.mod
