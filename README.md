@@ -23,28 +23,6 @@ make
 
 This will generate a kernel object file named procmon.ko.
 
-Installing the module
----------------------
-
-To install the kernel module, run the following command:
-
-```sh
-sudo insmod procmon.ko
-```
-
-This will load the module into the kernel.
-
-Uninstalling the module
------------------------
-
-To uninstall the kernel module, run the following command:
-
-```sh
-sudo rmmod procmon
-```
-
-This will unload the module from the kernel.
-
 Usage
 -----
 
@@ -56,3 +34,14 @@ sudo insmod procmon.ko pid=12345
 ```
 
 The memory map for the process with ID 12345 will be printed to the kernel log.
+
+Uninstalling the module
+-----------------------
+
+To uninstall the kernel module, run the following command:
+
+```sh
+sudo rmmod procmon
+```
+
+This will unload the module from the kernel.
